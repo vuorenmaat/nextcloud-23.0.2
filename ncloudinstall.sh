@@ -1,7 +1,7 @@
 sudo apt update
-sudo apt install apache2 mariadb-server libapache2-mod-php7.4
-sudo apt install php7.4-gd php7.4-mysql php7.4-curl php7.4-mbstring php7.4-intl
-sudo apt install php7.4-gmp php7.4-bcmath php-imagick php7.4-xml php7.4-zip
+sudo apt install apache2 mariadb-server libapache2-mod-php7.4 -y
+sudo apt install php7.4-gd php7.4-mysql php7.4-curl php7.4-mbstring php7.4-intl -y
+sudo apt install php7.4-gmp php7.4-bcmath php-imagick php7.4-xml php7.4-zip -y
 wget https://download.nextcloud.com/server/releases/nextcloud-23.0.2.zip
 wget https://download.nextcloud.com/server/releases/nextcloud-23.0.2.zip.asc
 wget https://nextcloud.com/nextcloud.asc
@@ -13,7 +13,7 @@ cd /etc/apache2/sites-available/
 touch nextcloud1.conf
 echo '<VirtualHost *:80>
   DocumentRoot /var/www/nextcloud1/
-  ServerName  nextcloud1.luova.club
+  ServerName  nextcloud.xrtekstitys.fi
 
   <Directory /var/www/nextcloud1/>
     Require all granted
